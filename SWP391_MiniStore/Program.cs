@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+using SWP391_MiniStore.Data;
+
 namespace SWP391_MiniStore
 {
     public class Program
@@ -8,6 +12,29 @@ namespace SWP391_MiniStore
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Connect to the database
+            builder.Services.AddDbContext<MiniStoreDbContext>(option =>
+                option.UseSqlServer(builder.Configuration
+                .GetConnectionString("MiniStoreConnectionString")));
+
+            // Add Authentication
+            builder.Services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/Access/Login";
+                    option.AccessDeniedPath = "/Access/Error";
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                    option.SlidingExpiration = true;
+                });
+
+            // Add Authorization
+            // Omit the builder.Services.AddAuthorization() call, and the default authorization policy with role-based support will be added automatically by the framework
+            builder.Services.AddAuthorization(option =>
+            {
+                option.AddPolicy("ManagerOnly", policy => policy.RequireClaim("Role", "Manager"));
+            });
 
             var app = builder.Build();
 
@@ -24,11 +51,12 @@ namespace SWP391_MiniStore
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Access}/{action=Login}/{id?}");
 
             app.Run();
         }
