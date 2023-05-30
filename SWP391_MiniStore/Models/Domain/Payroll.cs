@@ -8,13 +8,13 @@ namespace SWP391_MiniStore.Models.Domain
         [Key]
         public Guid PayrollID { get; set; }
 
-        public Guid FkStaffID { get; set; } // FK
+        public Guid? FkStaffID { get; set; } // FK
         [ForeignKey("FkStaffID")]
-        public StoreStaff Staff { get; set; } // (0,many) -> (1,1) NavigationProp
+        public StoreStaff? Staff { get; set; } // (0,many) -> (1,1) NavigationProp
 
-        public DateTime PayDate { get; set; }
-        public string Payslip { get; set; }
-        public decimal GrossPay { get; set; }
-        public decimal NetPay { get; set; }
+        public DateTime? PayDate { get; set; }
+        public string? Payslip { get; set; }
+        public decimal? GrossPay { get; set; }
+        public decimal? NetPay { get; set; }
     }
 }

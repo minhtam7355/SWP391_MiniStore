@@ -17,6 +17,7 @@ namespace SWP391_MiniStore.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             // Retrieve the user's roles from claims
@@ -45,30 +46,28 @@ namespace SWP391_MiniStore.Controllers
             }
         }
 
+        [HttpGet]
         public IActionResult ManagerIndex()
         {
             return View();
         }
 
+        [HttpGet]
         public IActionResult SaleIndex()
         {
             return View();
         }
 
+        [HttpGet]
         public IActionResult GuardIndex()
         {
             return View();
         }
 
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Login", "Access");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
