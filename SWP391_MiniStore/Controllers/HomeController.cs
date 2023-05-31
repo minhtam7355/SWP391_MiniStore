@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using SWP391_MiniStore.Models;
 using System.Diagnostics;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SWP391_MiniStore.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -29,10 +30,10 @@ namespace SWP391_MiniStore.Controllers
                 // Redirect to Manager's homepage
                 return RedirectToAction("ManagerIndex");
             }
-            else if (roles.Contains("Sale"))
+            else if (roles.Contains("Sales"))
             {
                 // Redirect to Sale's homepage
-                return RedirectToAction("SaleIndex");
+                return RedirectToAction("SalesIndex");
             }
             else if (roles.Contains("Guard"))
             {
@@ -53,7 +54,7 @@ namespace SWP391_MiniStore.Controllers
         }
 
         [HttpGet]
-        public IActionResult SaleIndex()
+        public IActionResult SalesIndex()
         {
             return View();
         }

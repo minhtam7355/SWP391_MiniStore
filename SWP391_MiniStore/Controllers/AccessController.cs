@@ -3,40 +3,86 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using SWP391_MiniStore.Models;
+using Microsoft.EntityFrameworkCore;
+using SWP391_MiniStore.Models.Domain;
+using SWP391_MiniStore.Data;
 
 namespace SWP391_MiniStore.Controllers
 {
     public class AccessController : Controller
     {
+        private readonly MiniStoreDbContext _dbContext;
+
+        public AccessController(MiniStoreDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
 
         [HttpGet]
         public IActionResult Login()
         {
             ClaimsPrincipal claimsUser = HttpContext.User;
 
-            return claimsUser.Identity.IsAuthenticated ? RedirectToAction("Index", "Home") : View();
+            return claimsUser?.Identity?.IsAuthenticated == true ? RedirectToAction("Index", "Home") : View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel modelLogin)
         {
-            if (modelLogin.EmailOrUsername == "user@gmail.com" && modelLogin.Password == "pass123")
+            StoreStaff? user = await _dbContext.StoreStaff.FirstOrDefaultAsync(staff =>
+                (staff.Email == modelLogin.EmailOrUsername || staff.Username == modelLogin.EmailOrUsername) &&
+                staff.Password == modelLogin.Password);
+
+            if (user != null)
             {
-                List<Claim> claims = new List<Claim>
+                List<Claim> claims = new List<Claim>();
+                
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, user.StaffID.ToString()));
+
+                if (!string.IsNullOrEmpty(user.Username))
                 {
-                    new Claim(ClaimTypes.NameIdentifier, "This stores the user's ID/unique identifier"),
-                    new Claim(ClaimTypes.Name, "This stores the user's name or display name"),
-                    new Claim(ClaimTypes.Email, "This stores the user's email address"),
-                    new Claim(ClaimTypes.Role, "This stores the user's role(s) for authorization"),
-                    new Claim(ClaimTypes.GivenName, "This stores the user's given name (first name)"),
-                    new Claim(ClaimTypes.Surname, "This stores the user's surname (last name)"),
-                    new Claim(ClaimTypes.DateOfBirth, "This stores the user's date of birth"),
-                    new Claim(ClaimTypes.MobilePhone, "This stores the user's mobile phone number"),
-                    new Claim(ClaimTypes.StreetAddress, "This stores the user's street address"),
-                    new Claim(ClaimTypes.Country, "This stores the user's country"),
-                    // Add more claims as needed
-                    
-                };
+                    claims.Add(new Claim(ClaimTypes.Name, user.Username));
+                }
+
+                if (!string.IsNullOrEmpty(user.Email))
+                {
+                    claims.Add(new Claim(ClaimTypes.Email, user.Email));
+                }
+
+                if (!string.IsNullOrEmpty(user.PhoneNumber))
+                {
+                    claims.Add(new Claim(ClaimTypes.MobilePhone, user.PhoneNumber));
+                }
+
+                if (!string.IsNullOrEmpty(user.Password))
+                {
+                    claims.Add(new Claim("Password", user.Password));
+                }
+
+                if (user.Dob != null)
+                {
+                    claims.Add(new Claim(ClaimTypes.DateOfBirth, user.Dob.ToString()));
+                }
+
+                if (!string.IsNullOrEmpty(user.Address))
+                {
+                    claims.Add(new Claim(ClaimTypes.StreetAddress, user.Address));
+                }
+
+                if (!string.IsNullOrEmpty(user.StaffRole))
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, user.StaffRole));
+                }
+
+                if (user.HourlyRate != null)
+                {
+                    claims.Add(new Claim("HourlyRate", user.HourlyRate.ToString()));
+                }
+
+                if (user.StaffStatus != null)
+                {
+                    claims.Add(new Claim("StaffStatus", user.StaffStatus.ToString()));
+                }
 
                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
                     CookieAuthenticationDefaults.AuthenticationScheme);
@@ -44,7 +90,7 @@ namespace SWP391_MiniStore.Controllers
                 AuthenticationProperties properties = new AuthenticationProperties()
                 {
                     AllowRefresh = true,
-                    IsPersistent = modelLogin.KeepLoggedIn
+                    IsPersistent = modelLogin.RememberMe
                 };
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,

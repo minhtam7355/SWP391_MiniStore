@@ -6,15 +6,15 @@
 <form method="post" class="mt-5">
     <div class="mb-3">
         <label for="EmailOrUsername" class="form-label">Email Or Username</label>
-        <input type="email" class="form-control" asp-for="EmailOrUsername" style="max-width: 400px;" />
+        <input type="text" class="form-control" asp-for="EmailOrUsername" style="max-width: 400px;" />
     </div>
     <div class="mb-3">
         <label for="Password" class="form-label">Password</label>
         <input type="password" class="form-control" asp-for="Password" style="max-width: 400px;" />
     </div>
     <div class="mb-3">
-        <label for="KeepLoggedIn" class="form-label">KeepLoggedIn</label>
-        <input type="checkbox" asp-for="KeepLoggedIn" />
+        <label for="RememberMe" class="form-label">Remember Me</label>
+        <input type="checkbox" asp-for="RememberMe" />
     </div>
     <button type="submit" class="btn btn-primary" asp-controller="Access" asp-action="Login">Login</button>
 </form>
