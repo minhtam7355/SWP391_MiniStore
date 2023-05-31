@@ -12,8 +12,8 @@ using SWP391_MiniStore.Data;
 namespace SWP391_MiniStore.Migrations
 {
     [DbContext(typeof(MiniStoreDbContext))]
-    [Migration("20230531071841_Initial Migratin")]
-    partial class InitialMigratin
+    [Migration("20230531083219_Initial Migration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

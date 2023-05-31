@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SWP391_MiniStore.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigratin : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -162,6 +162,7 @@ namespace SWP391_MiniStore.Migrations
                 table: "tblShiftAssignments",
                 column: "FkStaffID");
 
+
             // Use this in migration
 
             // Insert rows for Sale Shift
@@ -208,7 +209,6 @@ namespace SWP391_MiniStore.Migrations
                                 { Guid.NewGuid(), "guard2", "guard2@gmail.com", "666666666", "Password8", new DateTime(1990, 8, 8), "Address 8", "Guard", new Random().Next(15, 31), true },
                                 { Guid.NewGuid(), "guard3", "guard3@gmail.com", "777777777", "Password9", new DateTime(1990, 9, 9), "Address 9", "Guard", new Random().Next(15, 31), true }
                 });
-
         }
 
         /// <inheritdoc />
