@@ -61,7 +61,7 @@ namespace SWP391_MiniStore.Controllers
 
                 if (user.Dob != null)
                 {
-                    claims.Add(new Claim(ClaimTypes.DateOfBirth, user.Dob.ToString()));
+                    claims.Add(new Claim(ClaimTypes.DateOfBirth, user.Dob.Value.ToString()));
                 }
 
                 if (!string.IsNullOrEmpty(user.Address))
@@ -76,12 +76,12 @@ namespace SWP391_MiniStore.Controllers
 
                 if (user.HourlyRate != null)
                 {
-                    claims.Add(new Claim("HourlyRate", user.HourlyRate.ToString()));
+                    claims.Add(new Claim("HourlyRate", user.HourlyRate.Value.ToString()));
                 }
 
                 if (user.StaffStatus != null)
                 {
-                    claims.Add(new Claim("StaffStatus", user.StaffStatus.ToString()));
+                    claims.Add(new Claim("StaffStatus", user.StaffStatus.Value.ToString()));
                 }
 
                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,

@@ -1,0 +1,41 @@
+﻿@model SWP391_MiniStore.Models.ViewModels.Manager.EditManagerViewModel
+@{
+    ViewData["Title"] = "EditManagerProfile";
+}
+
+<h1>EditManagerProfile</h1>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group mb-3">
+                <label asp-for="Username" class="control-label">Username</label>
+                <input type="text" asp-for="Username" class="form-control" pattern="[A-Za-z0-9]{3,20}" title="Username must be alphanumeric and have 3 to 20 characters" required/>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label"></label>
+                <input type="email" asp-for="Email" class="form-control" required/>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input type="tel" asp-for="PhoneNumber" class="form-control" pattern="^\d{10}$" title="Please enter a valid phone number"/>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Dob" class="control-label"></label>
+                <input type="date" asp-for="Dob" class="form-control" required/>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Address" class="control-label"></label>
+                <input type="text" asp-for="Address" class="form-control"/>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Save" class="btn btn-primary" asp-controller="Manager" asp-action="EditManagerProfile"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Manager" asp-action="Index">Back to List</a>
+</div>
+

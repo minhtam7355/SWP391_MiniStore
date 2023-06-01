@@ -1,26 +1,51 @@
 ﻿@model SWP391_MiniStore.Models.LoginViewModel
 @{
+    ViewData["Title"] = "Login";
+    Layout = null;
 }
 
-<h1>Login</h1>
-<form method="post" class="mt-5">
-    <div class="mb-3">
-        <label for="EmailOrUsername" class="form-label">Email Or Username</label>
-        <input type="text" class="form-control" asp-for="EmailOrUsername" style="max-width: 400px;" />
-    </div>
-    <div class="mb-3">
-        <label for="Password" class="form-label">Password</label>
-        <input type="password" class="form-control" asp-for="Password" style="max-width: 400px;" />
-    </div>
-    <div class="mb-3">
-        <label for="RememberMe" class="form-label">Remember Me</label>
-        <input type="checkbox" asp-for="RememberMe" />
-    </div>
-    <button type="submit" class="btn btn-primary" asp-controller="Access" asp-action="Login">Login</button>
-</form>
+<!DOCTYPE html>
 
-@if (ViewData["ValidateMessage"] != null)
-{
-    <br />
-    <p>@ViewData["ValidateMessage"]</p>
-}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SWP391_MiniStore.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Login</h1>
+        <hr />
+        <form method="post" class="mt-5">
+            <div class="form-group mb-3">
+                <label asp-for="EmailOrUsername" class="control-label">Email Or Username</label>
+                <input type="text" asp-for="EmailOrUsername" class="form-control" style="max-width: 400px;" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="control-label">Password</label>
+                <input type="password" asp-for="Password" class="form-control" style="max-width: 400px;" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="RememberMe" class="control-label">Remember Me</label>
+                <input type="checkbox" asp-for="RememberMe" />
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Login" class="btn btn-primary" asp-controller="Access" asp-action="Login" />
+            </div>
+        </form>
+
+        @if (ViewData["ValidateMessage"] != null)
+        {
+            <br />
+            <p>@ViewData["ValidateMessage"]</p>
+        }
+    </div>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
