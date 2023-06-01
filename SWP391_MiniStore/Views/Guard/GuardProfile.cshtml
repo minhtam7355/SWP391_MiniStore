@@ -1,13 +1,12 @@
 ﻿@model SWP391_MiniStore.Models.Domain.StoreStaff
 
 @{
-    ViewData["Title"] = "StaffProfile";
+    ViewData["Title"] = "GuardProfile";
 }
 
-<h1>StaffProfile</h1>
+<h1>Guard Profile</h1>
 
 <div>
-    <h4>StoreStaff</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -67,6 +66,6 @@
     </dl>
 </div>
 <div>
-    <a asp-controller="Home" asp-action="Edit" asp-route-id="@Model?.StaffID">Edit</a> |
-    <a asp-controller="Home" asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.StaffID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

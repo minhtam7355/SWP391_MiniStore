@@ -76,7 +76,7 @@ namespace SWP391_MiniStore.Data
 
 //// Use this in migration
 
-//// Insert rows for Sale Shift
+//// Insert rows for Sales Shift
 //migrationBuilder.InsertData(
 //    table: "tblWorkShifts",
 //    columns: new[] { "ShiftID", "StaffRole", "Holiday", "DayOfWeek", "StartTime", "EndTime", "WorkHours", "SalaryCoef" },
@@ -110,7 +110,7 @@ namespace SWP391_MiniStore.Data
 //                    { Guid.NewGuid(), "manager2", "manager2@gmail.com", "987654321", "Password2", new DateTime(1990, 2, 2), "Address 2", "Manager", new Random().Next(50, 71), true },
 //                    { Guid.NewGuid(), "manager3", "manager3@gmail.com", "111111111", "Password3", new DateTime(1990, 3, 3), "Address 3", "Manager", new Random().Next(50, 71), true },
 
-//                    // Sale
+//                    // Sales
 //                    { Guid.NewGuid(), "sales1", "sales1@gmail.com", "222222222", "Password4", new DateTime(1990, 4, 4), "Address 4", "Sales", new Random().Next(30, 51), true },
 //                    { Guid.NewGuid(), "sales2", "sales2@gmail.com", "333333333", "Password5", new DateTime(1990, 5, 5), "Address 5", "Sales", new Random().Next(30, 51), true },
 //                    { Guid.NewGuid(), "sales3", "sales3@gmail.com", "444444444", "Password6", new DateTime(1990, 6, 6), "Address 6", "Sales", new Random().Next(30, 51), true },
