@@ -9,7 +9,7 @@
     @if (claimsUser.Identity != null && claimsUser.Identity.IsAuthenticated)
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="###" asp-action="###">Hello @User.Identity?.Name!</a> @*Implement Later*@
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="StaffProfile">Hello @User.Identity?.Name!</a> @*Implement Later*@
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Access" asp-action="Logout">Logout</a>

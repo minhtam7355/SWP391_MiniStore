@@ -5,6 +5,9 @@ using SWP391_MiniStore.Models;
 using System.Diagnostics;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using SWP391_MiniStore.Models.Domain;
+using Microsoft.EntityFrameworkCore;
+using SWP391_MiniStore.Data;
 
 namespace SWP391_MiniStore.Controllers
 {
@@ -12,10 +15,12 @@ namespace SWP391_MiniStore.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly MiniStoreDbContext _dbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, MiniStoreDbContext dbContext)
         {
             _logger = logger;
+            _dbContext = dbContext;
         }
 
         [HttpGet]
@@ -70,6 +75,19 @@ namespace SWP391_MiniStore.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult StaffProfile()
+        {
+            // Get the staff ID claim for the current user
+            string? staffID = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            // Retrieve the StoreStaff data based on the user ID
+            StoreStaff? staff = _dbContext.StoreStaff.FirstOrDefault(s => s.StaffID.ToString() == staffID);
+
+            return View(staff);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
