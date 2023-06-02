@@ -76,7 +76,7 @@ namespace SWP391_MiniStore.Data
 
 //// Use this in migration
 
-//// Insert rows for Sale Shift
+//// Insert rows for Sales Shift
 //migrationBuilder.InsertData(
 //    table: "tblWorkShifts",
 //    columns: new[] { "ShiftID", "StaffRole", "Holiday", "DayOfWeek", "StartTime", "EndTime", "WorkHours", "SalaryCoef" },
@@ -106,17 +106,17 @@ namespace SWP391_MiniStore.Data
 //    values: new object[,]
 //    {
 //                    // Manager
-//                    { Guid.NewGuid(), "manager1", "manager1@gmail.com", "123456789", "Password1", new DateTime(1990, 1, 1), "Address 1", "Manager", new Random().Next(50, 71), true },
-//                    { Guid.NewGuid(), "manager2", "manager2@gmail.com", "987654321", "Password2", new DateTime(1990, 2, 2), "Address 2", "Manager", new Random().Next(50, 71), true },
-//                    { Guid.NewGuid(), "manager3", "manager3@gmail.com", "111111111", "Password3", new DateTime(1990, 3, 3), "Address 3", "Manager", new Random().Next(50, 71), true },
+//                    { Guid.NewGuid(), "manager1", "manager1@gmail.com", "1234567890", "Password1#", new DateTime(1990, 1, 13), "Address 1", "Manager", new Random().Next(50, 71), true },
+//                    { Guid.NewGuid(), "manager2", "manager2@gmail.com", "9876543210", "Password2#", new DateTime(1990, 2, 14), "Address 2", "Manager", new Random().Next(50, 71), true },
+//                    { Guid.NewGuid(), "manager3", "manager3@gmail.com", "1111111111", "Password3#", new DateTime(1990, 3, 15), "Address 3", "Manager", new Random().Next(50, 71), true },
 
-//                    // Sale
-//                    { Guid.NewGuid(), "sales1", "sales1@gmail.com", "222222222", "Password4", new DateTime(1990, 4, 4), "Address 4", "Sales", new Random().Next(30, 51), true },
-//                    { Guid.NewGuid(), "sales2", "sales2@gmail.com", "333333333", "Password5", new DateTime(1990, 5, 5), "Address 5", "Sales", new Random().Next(30, 51), true },
-//                    { Guid.NewGuid(), "sales3", "sales3@gmail.com", "444444444", "Password6", new DateTime(1990, 6, 6), "Address 6", "Sales", new Random().Next(30, 51), true },
+//                    // Sales
+//                    { Guid.NewGuid(), "sales1", "sales1@gmail.com", "2222222222", "Password4#", new DateTime(1990, 4, 16), "Address 4", "Sales", new Random().Next(30, 51), true },
+//                    { Guid.NewGuid(), "sales2", "sales2@gmail.com", "3333333333", "Password5#", new DateTime(1990, 5, 17), "Address 5", "Sales", new Random().Next(30, 51), true },
+//                    { Guid.NewGuid(), "sales3", "sales3@gmail.com", "4444444444", "Password6#", new DateTime(1990, 6, 18), "Address 6", "Sales", new Random().Next(30, 51), true },
 
 //                    // Guard
-//                    { Guid.NewGuid(), "guard1", "guard1@gmail.com", "555555555", "Password7", new DateTime(1990, 7, 7), "Address 7", "Guard", new Random().Next(15, 31), true },
-//                    { Guid.NewGuid(), "guard2", "guard2@gmail.com", "666666666", "Password8", new DateTime(1990, 8, 8), "Address 8", "Guard", new Random().Next(15, 31), true },
-//                    { Guid.NewGuid(), "guard3", "guard3@gmail.com", "777777777", "Password9", new DateTime(1990, 9, 9), "Address 9", "Guard", new Random().Next(15, 31), true }
+//                    { Guid.NewGuid(), "guard1", "guard1@gmail.com", "5555555555", "Password7#", new DateTime(1990, 7, 19), "Address 7", "Guard", new Random().Next(15, 31), true },
+//                    { Guid.NewGuid(), "guard2", "guard2@gmail.com", "6666666666", "Password8#", new DateTime(1990, 8, 20), "Address 8", "Guard", new Random().Next(15, 31), true },
+//                    { Guid.NewGuid(), "guard3", "guard3@gmail.com", "7777777777", "Password9#", new DateTime(1990, 9, 21), "Address 9", "Guard", new Random().Next(15, 31), true }
 //    });

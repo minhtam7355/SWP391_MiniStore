@@ -22,6 +22,12 @@ namespace SWP391_MiniStore.Controllers
         public IActionResult Login()
         {
             ClaimsPrincipal claimsUser = HttpContext.User;
+            
+            string? errorMessage = TempData["ErrorMessage"] as string;
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                ModelState.AddModelError(string.Empty, errorMessage);
+            }
 
             return claimsUser?.Identity?.IsAuthenticated == true ? RedirectToAction("Index", "Home") : View();
         }
@@ -61,7 +67,7 @@ namespace SWP391_MiniStore.Controllers
 
                 if (user.Dob != null)
                 {
-                    claims.Add(new Claim(ClaimTypes.DateOfBirth, user.Dob.ToString()));
+                    claims.Add(new Claim(ClaimTypes.DateOfBirth, user.Dob.Value.ToString()));
                 }
 
                 if (!string.IsNullOrEmpty(user.Address))
@@ -76,12 +82,12 @@ namespace SWP391_MiniStore.Controllers
 
                 if (user.HourlyRate != null)
                 {
-                    claims.Add(new Claim("HourlyRate", user.HourlyRate.ToString()));
+                    claims.Add(new Claim("HourlyRate", user.HourlyRate.Value.ToString()));
                 }
 
                 if (user.StaffStatus != null)
                 {
-                    claims.Add(new Claim("StaffStatus", user.StaffStatus.ToString()));
+                    claims.Add(new Claim("StaffStatus", user.StaffStatus.Value.ToString()));
                 }
 
                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
@@ -99,9 +105,10 @@ namespace SWP391_MiniStore.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewData["ValidateMessage"] = "User not found";
+            ModelState.AddModelError(string.Empty, "User not found");
+            TempData["ErrorMessage"] = "User not found";
 
-            return View();
+            return RedirectToAction("Login");
         }
 
         [HttpGet]
