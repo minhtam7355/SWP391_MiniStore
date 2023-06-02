@@ -22,6 +22,12 @@ namespace SWP391_MiniStore.Controllers
         public IActionResult Login()
         {
             ClaimsPrincipal claimsUser = HttpContext.User;
+            
+            string? errorMessage = TempData["ErrorMessage"] as string;
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                ModelState.AddModelError(string.Empty, errorMessage);
+            }
 
             return claimsUser?.Identity?.IsAuthenticated == true ? RedirectToAction("Index", "Home") : View();
         }
@@ -99,9 +105,10 @@ namespace SWP391_MiniStore.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewData["ValidateMessage"] = "User not found";
+            ModelState.AddModelError(string.Empty, "User not found");
+            TempData["ErrorMessage"] = "User not found";
 
-            return View();
+            return RedirectToAction("Login");
         }
 
         [HttpGet]

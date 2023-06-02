@@ -33,15 +33,10 @@
                 <input type="checkbox" asp-for="RememberMe" />
             </div>
             <div class="form-group mb-3">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <input type="submit" value="Login" class="btn btn-primary" asp-controller="Access" asp-action="Login" />
             </div>
         </form>
-
-        @if (ViewData["ValidateMessage"] != null)
-        {
-            <br />
-            <p>@ViewData["ValidateMessage"]</p>
-        }
     </div>
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
