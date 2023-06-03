@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
 using SWP391_MiniStore.Models.Domain;
 
 namespace SWP391_MiniStore.Data
@@ -45,11 +44,22 @@ namespace SWP391_MiniStore.Data
                 .HasOne(la => la.Staff)
                 .WithMany(s => s.LeaveApplications)
                 .HasForeignKey(la => la.FkStaffID);
+            
+            modelBuilder.Entity<LeaveApplication>()
+                .HasOne(la => la.Manager)
+                .WithMany(m => m.ProcessedLeaveApplications)
+                .HasForeignKey(la => la.FkManagerID)
+                .IsRequired(false);
 
             modelBuilder.Entity<Payroll>()
                 .HasOne(p => p.Staff)
                 .WithMany(s => s.Payrolls)
                 .HasForeignKey(p => p.FkStaffID);
+
+            modelBuilder.Entity<Payroll>()
+                .HasOne(p => p.Manager)
+                .WithMany(m => m.SentPayrolls)
+                .HasForeignKey(p => p.FkManagerID);
 
             // Specify precision and scale
             modelBuilder.Entity<StoreStaff>()

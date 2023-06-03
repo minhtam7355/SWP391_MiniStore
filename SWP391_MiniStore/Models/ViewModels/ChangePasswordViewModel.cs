@@ -1,5 +1,4 @@
-﻿
-namespace SWP391_MiniStore.Models
+﻿namespace SWP391_MiniStore.Models.ViewModels
 {
     public class ChangePasswordViewModel
     {

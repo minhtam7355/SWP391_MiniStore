@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SWP391_MiniStore.Data;
-using SWP391_MiniStore.Models;
 using SWP391_MiniStore.Models.Domain;
-using SWP391_MiniStore.Models.ViewModels.Sales;
-using System.Security.Claims;
+using SWP391_MiniStore.Models.ViewModels;
 
 namespace SWP391_MiniStore.Controllers
 {
@@ -44,7 +41,7 @@ namespace SWP391_MiniStore.Controllers
                 return NotFound();
             }
 
-            EditSalesViewModel editSales = new EditSalesViewModel()
+            UpdateProfileViewModel editSales = new UpdateProfileViewModel()
             {
                 Username = sales.Username,
                 Email = sales.Email,
@@ -57,7 +54,7 @@ namespace SWP391_MiniStore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditSalesProfile(EditSalesViewModel editSales)
+        public async Task<IActionResult> EditSalesProfile(UpdateProfileViewModel editSales)
         {
             StoreStaff? sales = await this.GetCurrentStoreStaffAsync(_dbContext, HttpContext);
 

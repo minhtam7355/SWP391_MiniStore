@@ -1,0 +1,41 @@
+﻿@model List<SWP391_MiniStore.Models.Domain.StoreStaff>
+@{
+}
+
+<h1>Staff List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Password</th>
+            <th>Dob</th>
+            <th>Address</th>
+            <th>StaffRole</th>
+            <th>HourlyRate</th>
+            <th>StaffStatus</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.StaffID</td>
+                <td>@staff.Username</td>
+                <td>@staff.Email</td>
+                <td>@staff.PhoneNumber</td>
+                <td>@staff.Password</td>
+                <td>@staff.Dob</td>
+                <td>@staff.Address</td>
+                <td>@staff.StaffRole</td>
+                <td>@staff.HourlyRate</td>
+                <td>@staff.StaffStatus</td>
+                <td><a href="StaffManagement/View/@staff.StaffID">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
