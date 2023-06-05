@@ -18,7 +18,7 @@ namespace SWP391_MiniStore.Models.Domain
         public bool? StaffStatus { get; set; }
 
         [InverseProperty("Staff")]
-        public ICollection<ShiftAssignment>? ShiftAssignments { get; set; } // (1,1) -> (0,many) NavigationProp 
+        public ICollection<ShiftAssignment>? ShiftAssignments { get; set; } // (1,1) -> (0,many) NavigationProp
 
         [InverseProperty("Staff")]
         public ICollection<Attendance>? Attendances { get; set; } // (1,1) -> (0,many) NavigationProp
@@ -26,7 +26,13 @@ namespace SWP391_MiniStore.Models.Domain
         [InverseProperty("Staff")]
         public ICollection<LeaveApplication>? LeaveApplications { get; set; } // (1,1) -> (0,many) NavigationProp
 
+        [InverseProperty("Manager")]
+        public ICollection<LeaveApplication>? ProcessedLeaveApplications { get; set; } // (0,1) -> (0,many) NavigationProp
+
         [InverseProperty("Staff")]
         public ICollection<Payroll>? Payrolls { get; set; } // (1,1) -> (0,many) NavigationProp
+
+        [InverseProperty("Manager")]
+        public ICollection<Payroll>? SentPayrolls { get; set; } // (1,1) -> (0,many) NavigationProp
     }
 }

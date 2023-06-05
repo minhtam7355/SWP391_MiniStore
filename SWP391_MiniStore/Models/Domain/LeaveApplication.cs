@@ -12,6 +12,10 @@ namespace SWP391_MiniStore.Models.Domain
         [ForeignKey("FkStaffID")]
         public StoreStaff? Staff { get; set; } // (0,many) -> (1,1) NavigationProp
 
+        public Guid? FkManagerID { get; set; } // FK to the manager who approves or denies the leave application
+        [ForeignKey("FkManagerID")]
+        public StoreStaff? Manager { get; set; } // (0,many) -> (0,1) NavigationProp
+
         public DateTime? LeaveStart { get; set; }
         public DateTime? LeaveEnd { get; set; }
         public string? LeaveReason { get; set; }

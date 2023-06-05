@@ -1,0 +1,36 @@
+﻿@model List<SWP391_MiniStore.Models.Domain.StoreStaff>
+@{
+    ViewData["Title"] = "StaffList";
+}
+
+<div class="mb-3">
+    <a href="/StaffManagement/Add" class="btn btn-primary">Add Staff</a>
+</div>
+
+<h1>Staff List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Dob</th>
+            <th>StaffRole</th>
+            <th>StaffStatus</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.Username</td>
+                <td>@staff.Email</td>
+                <td>@if (staff.Dob.HasValue) @staff.Dob.Value.ToString("dd-MM-yyyy")</td>
+                <td>@staff.StaffRole</td>
+                <td>@(staff.StaffStatus == true ? "Available" : "On Break")</td>
+                <td><a href="/StaffManagement/View/@staff.StaffID">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

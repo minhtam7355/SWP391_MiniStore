@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SWP391_MiniStore.Data;
-using SWP391_MiniStore.Models;
 using SWP391_MiniStore.Models.Domain;
-using SWP391_MiniStore.Models.ViewModels.Manager;
-using System.Security.Claims;
+using SWP391_MiniStore.Models.ViewModels;
 
 namespace SWP391_MiniStore.Controllers
 {
@@ -45,7 +41,7 @@ namespace SWP391_MiniStore.Controllers
                 return NotFound();
             }
 
-            EditManagerViewModel editManager = new EditManagerViewModel()
+            UpdateProfileViewModel editManager = new UpdateProfileViewModel()
             {
                 Username = manager.Username,
                 Email = manager.Email,
@@ -58,7 +54,7 @@ namespace SWP391_MiniStore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditManagerProfile(EditManagerViewModel editManager)
+        public async Task<IActionResult> EditManagerProfile(UpdateProfileViewModel editManager)
         {
             StoreStaff? manager = await this.GetCurrentStoreStaffAsync(_dbContext, HttpContext);
 
@@ -168,5 +164,7 @@ namespace SWP391_MiniStore.Controllers
             // ModelState is not valid
             return View(changePassword);
         }
+
+
     }
 }

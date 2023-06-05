@@ -1,9 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
-
-namespace SWP391_MiniStore.Models.ViewModels.Manager
+﻿namespace SWP391_MiniStore.Models.ViewModels
 {
-    public class EditManagerViewModel
+    public class UpdateProfileViewModel
     {
         public string? Username { get; set; }
         public string? Email { get; set; }
