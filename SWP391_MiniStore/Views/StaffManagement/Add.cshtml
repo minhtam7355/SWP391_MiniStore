@@ -1,0 +1,65 @@
+﻿@model SWP391_MiniStore.Models.ViewModels.AddStaffViewModel
+@{
+}
+
+<h1>Add Staff</h1>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group mb-3">
+                <label asp-for="Username" class="control-label"></label>
+                <input type="text" asp-for="Username" class="form-control" pattern="[A-Za-z0-9]{3,20}" title="Username must be alphanumeric and have 3 to 20 characters" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label"></label>
+                <input type="email" asp-for="Email" class="form-control" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input type="tel" asp-for="PhoneNumber" class="form-control" pattern="^\d{10}$" title="Please enter a 10-digit phone number" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="control-label"></label>
+                <input type="password" asp-for="Password" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@@$!%^*?&])[A-Za-z\d#@@$!%^*?&]{8,20}$" required
+                       title="Password must meet the following requirements: At least 8 characters long, at most 20 characters long, contains at least 1 uppercase letter, contains at least 1 lowercase letter, contains at least 1 digit, and contains at least 1 special character (#, @@, $, !, %, ^, *, ?, &)." />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input type="password" asp-for="ConfirmPassword" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@@$!%^*?&])[A-Za-z\d#@@$!%^*?&]{8,20}$" required
+                       title="Password must meet the following requirements: At least 8 characters long, at most 20 characters long, contains at least 1 uppercase letter, contains at least 1 lowercase letter, contains at least 1 digit, and contains at least 1 special character (#, @@, $, !, %, ^, *, ?, &)." />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Dob" class="control-label"></label>
+                <input type="date" asp-for="Dob" class="form-control" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Address" class="control-label"></label>
+                <input type="text" asp-for="Address" class="form-control" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="StaffRole" class="control-label"></label>
+                <div class="form-check">
+                    <input type="radio" asp-for="StaffRole" value="Manager" class="form-check-input" required />
+                    <label class="form-check-label">Manager</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" asp-for="StaffRole" value="Sales" class="form-check-input" required />
+                    <label class="form-check-label">Sales</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" asp-for="StaffRole" value="Guard" class="form-check-input" required />
+                    <label class="form-check-label">Guard</label>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="HourlyRate" class="control-label"></label>
+                <input type="number" asp-for="HourlyRate" class="form-control" step="0.01" required />
+            </div>
+            <div class="form-group mb-3">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <input type="submit" value="Add Staff" class="btn btn-primary" asp-controller="StaffManagement" asp-action="Add"/>
+            </div>
+        </form>
+    </div>
+</div>
