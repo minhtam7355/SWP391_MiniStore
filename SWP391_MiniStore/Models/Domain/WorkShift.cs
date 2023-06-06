@@ -16,6 +16,6 @@ namespace SWP391_MiniStore.Models.Domain
         public decimal? SalaryCoef { get; set; }
 
         [InverseProperty("Shift")]
-        public ICollection<ShiftAssignment>? ShiftAssignments { get; set; } // (1,1) -> (0,many) NavigationProp
+        public virtual ICollection<ShiftAssignment>? ShiftAssignments { get; set; } // (1,1) -> (0,many) NavigationProp
     }
 }
