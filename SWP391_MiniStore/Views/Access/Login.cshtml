@@ -4,43 +4,68 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/SWP391_MiniStore.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="shortcut icon" type="image/png" href="~/images/logos/favicon.png" />
+    <link rel="stylesheet" href="~/css/styles.min.css" />
 </head>
+
 <body>
-    <div class="container mt-5">
-        <h1>Login</h1>
-        <hr />
-        <form method="post" class="mt-5">
-            <div class="form-group mb-3">
-                <label asp-for="EmailOrUsername" class="control-label">Email Or Username</label>
-                <input type="text" asp-for="EmailOrUsername" class="form-control" style="max-width: 400px;" required />
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        <div class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+            <div class="d-flex align-items-center justify-content-center w-100">
+                <div class="row justify-content-center w-100">
+                    <div class="col-md-8 col-lg-6 col-xxl-3">
+                        <div class="card mb-0">
+                            <div class="card-body">
+                                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                                    <img src="~/images/logos/MiniStore-Logo.svg" width="230"  alt="">
+                                </a>
+                                <p class="text-center">Welcome to Store</p>
+                                <form method="post">
+                                    <div class="mb-3">
+                                        <label for="EmailOrUsername" class="form-label">Email or Username</label>
+                                        <input type="text" class="form-control" asp-for="EmailOrUsername">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="Password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" asp-for="Password">
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
+                                            <label class="form-check-label text-dark" asp-for="RememberMe">
+                                                Remeber Me
+                                            </label>
+                                        </div>
+                                        <a class="text-primary fw-bold" href="./index.html">Forgot Password ?</a>
+                                    </div>
+                                    <div>
+                                        @Html.ValidationSummary(true, "", new{ @class = "text-danger"})
+                                        <input type="submit" value="Login" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" asp-controller="Access" asp-action="Login" />
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <p class="fs-4 mb-0 fw-bold">New to MiniStore?</p>
+                                        <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group mb-3">
-                <label asp-for="Password" class="control-label">Password</label>
-                <input type="password" asp-for="Password" class="form-control" style="max-width: 400px;" required />
-            </div>
-            <div class="form-group mb-3">
-                <label asp-for="RememberMe" class="control-label">Remember Me</label>
-                <input type="checkbox" asp-for="RememberMe" />
-            </div>
-            <div class="form-group mb-3">
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <input type="submit" value="Login" class="btn btn-primary" asp-controller="Access" asp-action="Login" />
-            </div>
-        </form>
+        </div>
     </div>
-    
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src= "~/js/site.js" asp-append-version="true"></script>"
 </body>
+
 </html>

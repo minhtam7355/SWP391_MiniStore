@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SWP391_MiniStore.Data;
 using SWP391_MiniStore.Models.Domain;
 using SWP391_MiniStore.Models.ViewModels;
+using System.Security.Claims;
 
 namespace SWP391_MiniStore.Controllers
 {
