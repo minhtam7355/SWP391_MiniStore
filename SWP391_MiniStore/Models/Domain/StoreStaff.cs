@@ -34,5 +34,8 @@ namespace SWP391_MiniStore.Models.Domain
 
         [InverseProperty("Manager")]
         public virtual ICollection<Payroll>? SentPayrolls { get; set; } // (1,1) -> (0,many) NavigationProp
+
+        [InverseProperty("Staff")]
+        public virtual ICollection<Order>? Orders { get; set; } // (0,1) -> (0,many) NavigationProp
     }
 }
