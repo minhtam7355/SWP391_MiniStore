@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - SWP391_MiniStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SWP391_MiniStore.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SWP391_MiniStore</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 text-uppercase justify-content-end pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-dark" asp-area="" asp-controller="#" asp-action="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-dark" asp-area="" asp-controller="#" asp-action="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4 text-dark" asp-area="" asp-controller="#" asp-action="#">Contact</a>
+                        </li>
+                        <partial name="_NavPartial" />
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer bg-dark">
+        <div class="container-fluid text-start pt-3" style="background-color: #212934; color: #cfd6e1; padding-left: 300px; padding-right: 300px;">
+            <div class="row" style="line-height: 1.5;">
+                <div class="col-6">
+                    <img class="mb-3" src="~/images/logos/MiniStore-Logo.svg" alt="logo">
+                    <p style="white-space: initial;">Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> 123 Street, HoChiMinh, VietNam</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@example.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +84 1 1234 1234</p>
+                </div>
+                <div class="col-3">
+                    <p><h3 class="font-weight-bold border-bottom pb-3 border-light mb-4">Quick Links</h3></p>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">About</a></p>
+                    <p><a href="#">Shop</a></p>
+                    <p><a href="#">Detail</a></p>
+                    <p><a href="#">Cart</a></p>
+                    <p><a href="#">Checkout</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+                <div class="col-3">
+                    <p><h3 class="font-weight-bold border-bottom pb-3 border-light mb-4">Products</h3></p>
+                    <p><a href="#">Mac</a></p>
+                    <p><a href="#">iPad</a></p>
+                    <p><a href="#">iPhone</a></p>
+                    <p><a href="#">Watch</a></p>
+                    <p><a href="#">AirPods</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <span style="color: azure;">&copy; 2023 - </span><a href="https://github.com/minhtam7355/SWP391_MiniStore" style="color: azure; text-decoration: none;">SWP391_MiniStore</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

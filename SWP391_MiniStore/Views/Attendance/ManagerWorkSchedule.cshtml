@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "ManagerWorkSchedule";
+}
+
+@{
+    // Define the starting date and the number of days to display
+    DateTime startDate = DateTime.Today;
+    int numberOfDays = 7; // Adjust this value based on how many days you want to display
+}
+<h1>ManagerWorkSchedule</h1>
+<hr />
+
+<table border="1" class="table table-bordered" style="text-align: center;">
+    <thead>
+        <tr>
+            <th rowspan="2">Staff Name</th>
+            <th rowspan="2">Staff Role</th>
+            @for (int i = 0; i < numberOfDays; i++)
+            {
+                DateTime currentDate = startDate.AddDays(i);
+                <th colspan="3">@currentDate.ToString("dddd")<br>@currentDate.ToString("dd-MM-yyyy")</th>
+            }
+        </tr>
+        <tr>
+            @for (int i = 0; i < numberOfDays; i++)
+            {
+                <th>6AM</th>
+                <th>12AM</th>
+                <th>6PM</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>NAME1</td>
+            <td>ROLE1</td>
+            @for (int i = 0; i < numberOfDays; i++)
+            {
+                <td></td>
+                <td></td>
+                <td></td>
+            }
+        </tr>
+        <tr>
+            <td>NAME2</td>
+            <td>ROLE2</td>
+            @for (int i = 0; i < numberOfDays; i++)
+            {
+                <td></td>
+                <td></td>
+                <td></td>
+            }
+        </tr>
+        <tr>
+            <td>NAME3</td>
+            <td>ROLE3</td>
+            @for (int i = 0; i < numberOfDays; i++)
+            {
+                <td></td>
+                <td></td>
+                <td></td>
+            }
+        </tr>
+    </tbody>
+</table>

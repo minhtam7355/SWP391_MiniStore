@@ -13,6 +13,9 @@
     <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ViewReports">View Reports</a> @*Implement Later*@
     </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Attendance" asp-action="ManagerWorkSchedule">Work Schedule</a>
+    </li>
 }
 else if (claimsUser.Identity != null && claimsUser.Identity.IsAuthenticated && claimsUser.HasClaim(c => c.Type == ClaimTypes.Role && c.Value == "Sales"))
 {

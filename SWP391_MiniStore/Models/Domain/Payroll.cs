@@ -10,11 +10,11 @@ namespace SWP391_MiniStore.Models.Domain
 
         public Guid? FkStaffID { get; set; } // FK
         [ForeignKey("FkStaffID")]
-        public StoreStaff? Staff { get; set; } // (0,many) -> (1,1) NavigationProp
+        public virtual StoreStaff? Staff { get; set; } // (0,many) -> (1,1) NavigationProp
 
         public Guid? FkManagerID { get; set; } // FK to the manager who sent the payroll
         [ForeignKey("FkManagerID")]
-        public StoreStaff? Manager { get; set; } // (0,many) -> (1,1) NavigationProp
+        public virtual StoreStaff? Manager { get; set; } // (0,many) -> (1,1) NavigationProp
 
         public DateTime? PayDate { get; set; }
         public string? Payslip { get; set; }
