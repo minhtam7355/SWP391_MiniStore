@@ -21,4 +21,12 @@
     <Folder Include="wwwroot\images\products\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Shared\_LayoutForECommerce.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\_LayoutForECommerce.cshtml" />
+  </ItemGroup>
+
 </Project>

@@ -66,27 +66,27 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            CategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            CategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             CategoryName = "Mac"
                         },
                         new
                         {
-                            CategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            CategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             CategoryName = "iPad"
                         },
                         new
                         {
-                            CategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            CategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             CategoryName = "iPhone"
                         },
                         new
                         {
-                            CategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            CategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             CategoryName = "Watch"
                         },
                         new
                         {
-                            CategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            CategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             CategoryName = "AirPods"
                         });
                 });
@@ -126,7 +126,7 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            CustomerID = new Guid("26db4faf-d106-407a-8f85-ee3f7e5bb21d"),
+                            CustomerID = new Guid("a5528a84-7dbf-488f-81ff-85e5b3070051"),
                             Address = "Address X",
                             Balance = 3000m,
                             Dob = new DateTime(1990, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -137,7 +137,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            CustomerID = new Guid("9e362b75-79b5-4408-9269-768614296389"),
+                            CustomerID = new Guid("d20563e5-a542-4c48-9dc3-db37cc7f6e48"),
                             Address = "Address X",
                             Balance = 5000m,
                             Dob = new DateTime(1990, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -148,7 +148,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            CustomerID = new Guid("72d43499-5f35-488b-b239-7b0584f2a7c6"),
+                            CustomerID = new Guid("17befbc0-04f0-4b2c-9a74-cf1861c9f1a7"),
                             Address = "Address X",
                             Balance = 7000m,
                             Dob = new DateTime(1990, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -369,8 +369,8 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            ProductID = new Guid("5fbd9a4b-8989-4397-b795-14d5feee613d"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("32795705-0d8a-4c34-a80f-ef7603c26135"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the power and efficiency of the Apple M1 chip with the MacBook Air (M1, 2020). This lightweight and portable laptop deliver incredible performance and battery life. With its stunning Retina display, Magic Keyboard, and spacious trackpad, the MacBook Air provides an immersive and comfortable user experience. Whether you're browsing the web, editing photos, or working on intensive tasks, the MacBook Air is up to the challenge.",
                             ProductImg = "~/images/products/Mac/MacBook Air (M1, 2020).jpg",
@@ -381,8 +381,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("1baf912d-fb5b-434a-80e0-8355866288ec"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("bb24f347-d83d-49a6-95ae-669ab023f9e8"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Unleash your creativity and productivity with the MacBook Air (M2, 2022). Powered by the next-generation M2 chip, this laptop delivers exceptional performance and energy efficiency. The stunning Retina display with True Tone technology brings your content to life with vibrant colors and sharp details. With its sleek and portable design, comfortable keyboard, and all-day battery life, the MacBook Air is the perfect companion for your everyday tasks and creative endeavors.",
                             ProductImg = "~/images/products/Mac/MacBook Air (M2, 2022).png",
@@ -393,8 +393,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("2edeb83f-dedd-4f59-99ef-e9815488e90b"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("f64484fc-62ca-4bdf-af0d-2c2a366c98d7"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Take your productivity to new heights with the MacBook Pro (13-inch, M2, 2022). Featuring the powerful M2 chip and advanced graphics, this laptop delivers incredible performance for demanding tasks and creative projects. The stunning Retina display with ProMotion technology provides smooth visuals and precise color reproduction. With its innovative Touch Bar, responsive keyboard, and immersive sound, the MacBook Pro (13-inch, M2, 2022) is designed to elevate your work and entertainment experience.",
                             ProductImg = "~/images/products/Mac/MacBook Pro (13-inch, M2, 2022).png",
@@ -405,8 +405,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("d355d6d6-7a48-49d9-ade2-59d10bf3d029"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("5bc8279b-1fc0-4ac1-b1da-e9cb277696ee"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the future of professional computing with the MacBook Pro (14-inch, 2023). This redesigned laptop features a stunning 14-inch Liquid Retina XDR display with mini-LED backlighting, offering exceptional brightness and contrast. Powered by the latest generation of Apple silicon, it delivers incredible performance and efficiency. With its advanced thermal system, redesigned keyboard, and immersive audio, the MacBook Pro (14-inch, 2023) is the ultimate tool for professionals and power users.",
                             ProductImg = "~/images/products/Mac/MacBook Pro (14-inch, 2023).png",
@@ -417,8 +417,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("23e0d0cb-851a-4f8f-befe-affb4a8bdb90"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("7f2104dc-ccb6-4edb-9b84-f0dbf30896ee"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Get ready for the most powerful MacBook Pro ever with the MacBook Pro (16-inch, 2023). Equipped with the latest Intel processors, advanced graphics, and a stunning Retina display, this laptop is built to handle the most demanding tasks and deliver incredible performance. With its immersive sound, spacious trackpad, and comfortable keyboard, the MacBook Pro (16-inch, 2023) provides an unparalleled user experience for professionals and creative enthusiasts.",
                             ProductImg = "~/images/products/Mac/MacBook Pro (16-inch, 2023).png",
@@ -429,8 +429,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("733b8ba0-4ea9-4a56-b1a3-c691c3fdd340"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("1225f1f7-65f1-4f35-b0a5-525bd577bb75"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience desktop power in a compact form factor with the Mac mini (2023). This versatile desktop computer packs incredible performance and connectivity options into a small and stylish design. Whether you're using it for everyday tasks, creative projects, or as a home media center, the Mac mini (2023) delivers exceptional speed and responsiveness. With its advanced thermal architecture and wide range of ports, you can connect a variety of peripherals and unleash your productivity.",
                             ProductImg = "~/images/products/Mac/Mac mini (2023).png",
@@ -441,8 +441,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("aca70684-7506-43ef-8094-b612846c235e"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("a2e3c05b-114b-4451-826f-2e05c13f0eed"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the power and versatility of the Mac Studio (2023). This all-in-one desktop computer combines performance, display, and audio into a seamless and immersive experience. With its stunning 32-inch Retina display, powerful M1 chip, and studio-quality speakers, the Mac Studio is designed for professionals in creative fields such as design, photography, and music production. Experience the future of desktop computing with the Mac Studio (2023).",
                             ProductImg = "~/images/products/Mac/Mac Studio (2023).png",
@@ -453,8 +453,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("4bf78ae3-62c0-4bcd-bfb0-9a480800a87d"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("e2a05e60-0759-44d0-a03d-6f5ece1b67e9"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Unleash your creativity with the Mac Pro (M2 Ultra). This high-performance desktop computer is designed for professionals who demand the ultimate in processing power and expansion capabilities. With the next-generation M2 Ultra chip, advanced graphics, and modular design, the Mac Pro delivers unmatched performance for tasks such as 3D rendering, video editing, and scientific simulations. Customize your system with powerful GPUs, high-speed storage, and vast amounts of memory to create a workstation that meets your specific needs.",
                             ProductImg = "~/images/products/Mac/Mac Pro(M2 Ultra).jpg",
@@ -465,8 +465,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("c2640f7a-8f2e-42b1-bc09-cfd8f3bca401"),
-                            FkCategoryID = new Guid("ed09d5cd-cbde-4892-a32e-1e3424084731"),
+                            ProductID = new Guid("d295b179-7da2-4dd3-afc4-bfe93fc0d5f7"),
+                            FkCategoryID = new Guid("51ba5df1-1297-4c3d-af1e-eafba250a121"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience a new level of performance and design with the iMac (24-inch, M1, 2021). Powered by the Apple M1 chip, this all-in-one desktop computer delivers remarkable speed and efficiency. The 24-inch Retina display with True Tone technology brings your content to life with vibrant colors and sharp details. With its sleek and thin design, enhanced audio capabilities, and advanced camera and microphone system, the iMac (24-inch, M1, 2021) is perfect for work, creativity, and entertainment.",
                             ProductImg = "~/images/products/Mac/iMac (24-inch, M1, 2021).jpg",
@@ -477,8 +477,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("0361f4c6-bb57-4394-ba14-ea98125ef4e1"),
-                            FkCategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            ProductID = new Guid("5b670563-afa6-4f05-816d-ad2f0ac935c1"),
+                            FkCategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the power of iPad in a compact form with the iPad mini (6th generation). Featuring the A15 Bionic chip, this tablet delivers incredible performance and graphics capabilities. With its 8.3-inch Liquid Retina display, Apple Pencil support, and advanced cameras, the iPad mini is perfect for gaming, content creation, and on-the-go productivity.",
                             ProductImg = "~/images/products/iPad/iPad mini (6th generation).png",
@@ -489,8 +489,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("7ac21f62-1a1f-41b0-bfed-f10d3d1913ca"),
-                            FkCategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            ProductID = new Guid("1b3d626a-0bec-48dc-8e0b-70d7ab82cc52"),
+                            FkCategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the versatility of the iPad (9th generation). Powered by the A13 Bionic chip, this tablet offers impressive performance for both work and play. Its 10.2-inch Retina display provides a stunning canvas for your content, while features like Apple Pencil support and the Smart Keyboard make it even more versatile and productive.",
                             ProductImg = "~/images/products/iPad/iPad (9th generation).png",
@@ -501,8 +501,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("e1eedf4c-d09a-4552-b9d3-796bca20c9e7"),
-                            FkCategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            ProductID = new Guid("99ee45a5-2ea3-4848-a371-25996e7d4e22"),
+                            FkCategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the next generation of iPad with the iPad (10th generation). Powered by the A14 Bionic chip, this tablet delivers remarkable performance and graphics capabilities. Its 10.2-inch Retina display provides a stunning visual experience, while features like Apple Pencil support and the Smart Keyboard make it even more versatile and productive.",
                             ProductImg = "~/images/products/iPad/iPad (10th generation).png",
@@ -513,8 +513,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("d99cde06-9bb2-4e7d-991f-74e56ebcc14c"),
-                            FkCategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            ProductID = new Guid("ce9d3811-e9c5-493e-add8-5ae3ccb24637"),
+                            FkCategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             ProductBrand = "Apple",
                             ProductDescription = "Unleash your creativity with the iPad Air (5th generation). Powered by the A15 Bionic chip, this tablet offers incredible performance and graphics capabilities. Its 10.9-inch Liquid Retina display with True Tone brings your content to life, while features like Apple Pencil support and the Magic Keyboard enhance your productivity and creativity.",
                             ProductImg = "~/images/products/iPad/iPad Air (5th generation).png",
@@ -525,8 +525,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("3b7b84ae-9f91-4339-a419-022b151c183b"),
-                            FkCategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            ProductID = new Guid("d8323a1b-4ca2-4b4e-8f02-38ccb4866773"),
+                            FkCategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the ultimate iPad performance with the iPad Pro 11-inch (4th generation). Powered by the M1 chip, this tablet delivers unmatched speed and power. Its stunning Liquid Retina XDR display with ProMotion technology offers true-to-life colors and smooth scrolling. With advanced features like Face ID, Apple Pencil support, and the Magic Keyboard, the iPad Pro 11-inch is a powerful tool for creative professionals and productivity enthusiasts.",
                             ProductImg = "~/images/products/iPad/iPad Pro 11-inch (4th generation).png",
@@ -537,8 +537,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("41e6e2aa-7289-4dbc-9567-77f494fda73c"),
-                            FkCategoryID = new Guid("88063adf-151c-41e6-a8d4-53f5a5fad4e5"),
+                            ProductID = new Guid("cb46d9ef-b26f-40d3-a3eb-c4d19802cbe2"),
+                            FkCategoryID = new Guid("5a05c882-55d1-4045-9edd-e30c3be51d34"),
                             ProductBrand = "Apple",
                             ProductDescription = "Immerse yourself in the ultimate iPad experience with the iPad Pro 12.9-inch (6th generation). Powered by the M1 chip, this tablet delivers unprecedented performance and graphics capabilities. Its breathtaking Liquid Retina XDR display with ProMotion technology provides stunning visuals with HDR content support. With advanced features like Face ID, Apple Pencil support, and the Magic Keyboard, the iPad Pro 12.9-inch is the perfect companion for creative professionals and demanding tasks.",
                             ProductImg = "~/images/products/iPad/iPad Pro 12.9-inch (6th generation).png",
@@ -549,8 +549,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("eb88bcc2-a83e-455f-beda-4f3032c7b59e"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("9cfb635f-9797-44aa-975b-2d88cfee4fc0"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the power of the compact iPhone SE (3rd generation). Featuring the A15 Bionic chip, this phone delivers remarkable performance and graphics capabilities. Its 4.7-inch Retina HD display and advanced camera system make it perfect for capturing stunning photos and videos. With features like Touch ID and wireless charging, the iPhone SE is a powerful device in a compact form factor.",
                             ProductImg = "~/images/products/iPhone/iPhone SE (3rd generation).png",
@@ -561,8 +561,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("ac69f854-e69d-4a59-9a10-af6e3a4ed4ae"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("aa3af758-427b-4104-9b51-ca6e0fda4b85"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the power of the iPhone 13 mini. Powered by the A15 Bionic chip, this phone offers incredible performance and efficiency. Its 5.4-inch Super Retina XDR display provides stunning visuals, while the advanced camera system allows you to capture professional-quality photos and videos. With features like Face ID, 5G connectivity, and all-day battery life, the iPhone 13 mini is a compact powerhouse.",
                             ProductImg = "~/images/products/iPhone/iPhone 13 mini.png",
@@ -573,8 +573,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("506fdf9d-806a-4174-8c0b-41ee4879b62f"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("6eb33d71-5ad8-4766-a917-14c53780d45d"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the exceptional capabilities of the iPhone 13. Powered by the A15 Bionic chip, this phone delivers incredible performance and efficiency. Its 6.1-inch Super Retina XDR display with ProMotion technology provides a stunning visual experience. With advanced camera features, including Night mode and Deep Fusion, you can capture professional-quality photos and videos. The iPhone 13 also offers 5G connectivity, all-day battery life, and enhanced durability.",
                             ProductImg = "~/images/products/iPhone/iPhone 13.png",
@@ -585,8 +585,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("d2be6bc3-867b-4d0b-a46a-f25e94faedbd"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("82c9105d-34cf-4ec5-a4f9-ac31e5ef0661"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the ultimate iPhone with the iPhone 13 Pro. Powered by the A15 Bionic chip, this phone offers unmatched performance and efficiency. Its 6.1-inch Super Retina XDR display with ProMotion technology delivers stunning visuals with HDR content support. With the advanced camera system, including the new Pro camera mode and ProRAW, you can capture and edit professional-quality photos and videos. The iPhone 13 Pro also features 5G connectivity, enhanced durability, and all-day battery life.",
                             ProductImg = "~/images/products/iPhone/iPhone 13 Pro.png",
@@ -597,8 +597,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("eed3aa81-7998-4cea-9544-b8d4d9bc61d8"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("62300802-d6e1-4dc2-9248-46e44aa66c9f"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the epitome of iPhone excellence with the iPhone 13 Pro Max. Powered by the A15 Bionic chip, this phone offers exceptional performance and efficiency. Its 6.7-inch Super Retina XDR display with ProMotion technology provides breathtaking visuals with HDR content support. With the advanced camera system, including the new Pro camera mode and ProRAW, you can capture and edit professional-quality photos and videos. The iPhone 13 Pro Max also features 5G connectivity, enhanced durability, and all-day battery life.",
                             ProductImg = "~/images/products/iPhone/iPhone 13 Pro Max.png",
@@ -609,8 +609,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("a4a1efc3-8e80-49e6-8a65-c8a8104bf709"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("f6ed9cd6-188b-4d11-9aa1-45e2b3732234"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the future of iPhone with the iPhone 14. Powered by the next-generation A16 chip, this phone delivers unparalleled performance and efficiency. Its stunning Super Retina XDR display provides a vibrant and immersive visual experience. With advanced camera features, enhanced AI capabilities, and seamless integration with Apple's ecosystem, the iPhone 14 redefines what a smartphone can do.",
                             ProductImg = "~/images/products/iPhone/iPhone 14.png",
@@ -621,8 +621,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("b10c8144-f84b-4ace-a111-0dd14c3a749c"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("4367836e-8fb1-43b5-abe4-966eea158dee"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the larger variant of the iPhone 14 with the iPhone 14 Plus. Powered by the next-generation A16 chip, this phone offers exceptional performance and efficiency. Its expansive Super Retina XDR display provides a stunning visual experience with true-to-life colors. With advanced camera features, enhanced AI capabilities, and a range of innovative technologies, the iPhone 14 Plus takes your smartphone experience to new heights.",
                             ProductImg = "~/images/products/iPhone/iPhone 14 Plus.png",
@@ -633,8 +633,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("ba1d4cf2-cf4c-4710-a604-0546b6bdc66f"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("f5d4c4d4-c00f-4716-91cc-5dfaa938c785"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the pinnacle of iPhone technology with the iPhone 14 Pro. Powered by the next-generation A16 chip, this phone offers unmatched performance and efficiency. Its Super Retina XDR display with ProMotion technology delivers breathtaking visuals with HDR content support. With the advanced camera system, powerful AI capabilities, and a suite of professional-grade features, the iPhone 14 Pro empowers you to capture, create, and explore like never before.",
                             ProductImg = "~/images/products/iPhone/iPhone 14 Pro.png",
@@ -645,8 +645,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("2e9ed802-37df-484e-a953-53765ac2165b"),
-                            FkCategoryID = new Guid("95629ef1-8c3c-44fc-a7c6-868f2013cedb"),
+                            ProductID = new Guid("05021dcf-9b0e-4dbd-af6b-e55a435cae07"),
+                            FkCategoryID = new Guid("84abd216-8835-47cb-b4ab-4c61306cce0a"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover the pinnacle of iPhone excellence with the iPhone 14 Pro Max. Powered by the next-generation A16 chip, this phone delivers unparalleled performance and efficiency. Its Super Retina XDR display with ProMotion technology provides a stunning visual experience with true blacks and vibrant colors. With the advanced camera system, enhanced AI capabilities, and a range of innovative features, the iPhone 14 Pro Max is designed to elevate your smartphone experience to new heights.",
                             ProductImg = "~/images/products/iPhone/iPhone 14 Pro Max.png",
@@ -657,8 +657,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("2affa58e-dd99-4cad-ba67-6ef4cd8d899f"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("10959b71-007f-4215-97d9-93db684d4b88"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Introducing the Apple Watch Series 1, your ultimate fitness and productivity companion. With its sleek design and powerful features, this watch keeps you connected and motivated throughout the day. Stay on top of your fitness goals, track your workouts, and monitor your heart rate. Receive notifications, answer calls, and access your favorite apps right from your wrist. The Apple Watch Series 1 is the perfect blend of style and functionality.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 1.jpg",
@@ -669,8 +669,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("31a04832-b590-4d70-a455-b89eae800b18"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("58e62898-394b-4c13-a7ac-5c860e278cbe"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Upgrade your wristwear with the Apple Watch Series 2. Packed with advanced features and improved performance, this watch takes your experience to the next level. Enjoy a brighter display, built-in GPS, and water resistance up to 50 meters. Track your workouts with precision, receive personalized coaching, and stay motivated throughout the day. With its stylish design and seamless integration with your iPhone, the Apple Watch Series 2 is the perfect companion for an active and connected lifestyle.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 2.jpg",
@@ -681,8 +681,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("9928429d-b3fd-4b01-b9f2-c07204d150e1"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("0e522eee-48be-44c9-bfc6-db223e00b3b3"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the power of Apple Watch Series 3 on your wrist. With built-in cellular connectivity, you can make calls, send messages, stream music, and more, even without your iPhone nearby. Stay active and motivated with advanced fitness tracking, automatic workout detection, and heart rate monitoring. The bright and crisp display keeps you informed and engaged throughout the day. With its iconic design and seamless integration with your Apple devices, the Apple Watch Series 3 is your ultimate companion for a connected life.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 3.jpg",
@@ -693,8 +693,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("e9d77afe-581b-484d-95e7-09c3e2b0b3a5"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("e5894a2e-7e50-44fc-bc1e-71af422a15fc"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Discover a new era of Apple Watch with the Series 4. With its stunning display, slimmer profile, and breakthrough health features, this watch redefines what a timepiece can do. The larger screen allows for more immersive experiences and improved readability. Track your workouts with enhanced precision, monitor your heart rate, and receive proactive health notifications. With built-in ECG and fall detection, the Apple Watch Series 4 is your intelligent health guardian on your wrist.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 4.jpg",
@@ -705,8 +705,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("8d8df9f3-807b-4915-b25a-9ca986be4888"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("15c23f66-d05f-497d-9e4f-e45a6d57896c"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the future of smartwatches with the Apple Watch Series 5. This watch features an Always-On Retina display that never sleeps, allowing you to check the time and glance at your important information without raising your wrist. Stay connected with built-in cellular and GPS capabilities, track your workouts with advanced sensors, and monitor your heart rate throughout the day. With its stylish design and powerful features, the Apple Watch Series 5 is the perfect blend of fashion and technology.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 5.jpg",
@@ -717,8 +717,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("cb9d9f8d-4595-4459-8de4-6e9e8dbe036e"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("37e013dd-ab06-47e0-bf07-be2c3d420944"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Embrace the future of smartwatches with the Apple Watch Series 6. Featuring advanced health sensors, this watch helps you monitor your blood oxygen levels, measure your ECG, and track your sleep patterns. Stay connected, make calls, send messages, and stream music, all without your iPhone nearby. The Always-On Retina display is now brighter and more energy-efficient, providing you with clear and vibrant visuals throughout the day. With its powerful features and stylish design, the Apple Watch Series 6 is the ultimate companion for a healthy and connected life.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 6.jpg",
@@ -729,8 +729,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("8b1446fe-24b8-4b1f-8d15-24ca82fe74db"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("65536323-3189-4b2c-8ec3-9e94acb2f9cb"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the next generation of Apple Watch with the Series 7. With its larger display, sleek design, and powerful features, this watch is the epitome of innovation and style. The Always-On Retina display is now even more expansive, allowing for more information and greater readability. Stay connected, track your workouts, monitor your health, and access your favorite apps with ease. With its durable construction and advanced technologies, the Apple Watch Series 7 is built to accompany you on all of life's adventures.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 7.jpeg",
@@ -741,8 +741,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("bf0f6d00-5ac9-4eee-97db-8d58f1a31009"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("ef0a183b-c715-4e87-b7b6-8c88479db060"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Introducing the Apple Watch Series 8, the next generation of smartwatches. With its advanced features and sleek design, this watch is a true technological marvel. The stunning always-on display is larger and brighter, providing crystal-clear visuals and enhanced readability. Track your fitness goals, monitor your health, and stay connected with ease. The Apple Watch Series 8 is built to elevate your daily life and empower you to achieve more.",
                             ProductImg = "~/images/products/Watch/Apple Watch Series 8.jpeg",
@@ -753,8 +753,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("707b337f-e8b9-48ed-91c1-bac977c02cdd"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("f2075615-253b-45f8-a005-660e05aed70f"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Get the best of Apple Watch at an affordable price with the Apple Watch SE (1st generation). Featuring a powerful dual-core processor, this watch delivers fast performance and seamless connectivity. Track your workouts, monitor your heart rate, and stay motivated with advanced fitness features. With its sleek design and stunning Retina display, the Apple Watch SE (1st generation) is the perfect blend of style and functionality.",
                             ProductImg = "~/images/products/Watch/Apple Watch SE (1st generation).jpeg",
@@ -765,8 +765,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("d706e2dc-50f2-4d0c-9545-a347dd605e38"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("ba9484e4-447e-48af-ad1a-1537e72beb9d"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Introducing the Apple Watch SE (2nd generation), the perfect companion for your active lifestyle. With its powerful features and affordable price, this watch offers a seamless experience. Stay connected, track your workouts, and monitor your health with ease. With its stylish design and expansive Retina display, the Apple Watch SE (2nd generation) is the ultimate fusion of affordability and performance.",
                             ProductImg = "~/images/products/Watch/Apple Watch SE (2nd generation).jpeg",
@@ -777,8 +777,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("59e76ce5-746e-4ffe-85e7-422a0fcc73f1"),
-                            FkCategoryID = new Guid("73903055-498b-4fda-b2c9-4e7f5a7e539b"),
+                            ProductID = new Guid("1d9667ba-0f6f-49c5-856d-bfdf8421b87a"),
+                            FkCategoryID = new Guid("86543e85-90ae-419b-839c-ae34d9839c6e"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the pinnacle of smartwatch technology with the Apple Watch Ultra. This watch pushes the boundaries of innovation with its cutting-edge features and premium design. Enjoy a larger and more vibrant display, enhanced health tracking capabilities, and seamless integration with your favorite apps and services. Stay connected, monitor your fitness, and elevate your productivity with the Apple Watch Ultra.",
                             ProductImg = "~/images/products/Watch/Apple Watch Ultra.jpg",
@@ -789,8 +789,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("36c40ba3-a786-476e-9c71-b2d50e24f754"),
-                            FkCategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            ProductID = new Guid("0a5b3424-c332-4eb6-93be-d46dca39efd9"),
+                            FkCategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience the freedom of wireless listening with AirPods (1st generation). These innovative earbuds offer quick and easy setup, delivering high-quality audio with remarkable clarity. Seamlessly switch between your Apple devices and enjoy the convenience of hands-free Siri access. Whether you're listening to music, watching movies, or taking calls, AirPods (1st generation) provide a truly wireless and immersive audio experience.",
                             ProductImg = "~/images/products/AirPods/AirPods (1st generation).jpeg",
@@ -801,8 +801,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("09ae1a5a-6bdd-413f-ac08-77c4a3a86dc3"),
-                            FkCategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            ProductID = new Guid("37586e39-745b-4538-9c87-bff60e0159fa"),
+                            FkCategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             ProductBrand = "Apple",
                             ProductDescription = "Upgrade your audio experience with AirPods (2nd generation). Powered by the advanced H1 chip, these wireless earbuds offer faster and more stable connections, reducing latency and enhancing overall performance. With longer talk time and hands-free Siri access, you can effortlessly manage your music, make calls, and control your devices with a simple voice command. The sleek design and comfortable fit make AirPods (2nd generation) the perfect companion for your active lifestyle.",
                             ProductImg = "~/images/products/AirPods/AirPods (2nd generation).png",
@@ -813,8 +813,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("5a7c2cda-40c4-43f3-8922-1954357df59a"),
-                            FkCategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            ProductID = new Guid("25840a10-1cdc-4bc2-9a7c-9863c1cddfc7"),
+                            FkCategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             ProductBrand = "Apple",
                             ProductDescription = "Immerse yourself in sound with AirPods (3rd generation). These cutting-edge wireless earbuds feature a redesigned shape and fit, providing enhanced comfort and a more secure listening experience. Enjoy immersive audio with active noise cancellation, which blocks out external distractions and allows you to focus on your music or calls. AirPods (3rd generation) also introduce spatial audio, delivering a truly immersive soundstage that surrounds you. With Adaptive EQ and seamless device switching, these earbuds elevate your audio experience to new heights.",
                             ProductImg = "~/images/products/AirPods/AirPods (3rd generation).png",
@@ -825,8 +825,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("33f4dc42-e30e-4c44-88b8-21b83019d853"),
-                            FkCategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            ProductID = new Guid("31a697dd-2774-448a-ac7f-258b25a8bd15"),
+                            FkCategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             ProductBrand = "Apple",
                             ProductDescription = "Step into the world of premium audio with AirPods Pro (1st generation). These exceptional wireless earbuds feature active noise cancellation, allowing you to block out unwanted noise and fully immerse yourself in your music or calls. The customizable fit, achieved through three sizes of soft, tapered silicone tips, ensures a secure and comfortable seal in your ear. Experience rich and detailed sound with Adaptive EQ, which automatically tunes the music to the shape of your ear. With transparency mode, you can easily switch to hear your surroundings when needed. AirPods Pro (1st generation) redefine the way you listen.",
                             ProductImg = "~/images/products/AirPods/AirPods Pro (1st generation).png",
@@ -837,8 +837,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("c985f989-3a2f-4bf8-bd4e-28648ac24643"),
-                            FkCategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            ProductID = new Guid("d33d64f5-7728-45c6-a9c1-1dbc941eee5c"),
+                            FkCategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             ProductBrand = "Apple",
                             ProductDescription = "Elevate your audio experience with AirPods Pro (2nd generation). These advanced wireless earbuds build upon the success of the previous generation, offering enhanced features and performance. Enjoy the immersive sound of active noise cancellation, which intelligently adapts to your environment, providing an uninterrupted listening experience. The customizable fit, achieved through three sizes of soft, tapered silicone tips, ensures a comfortable and secure seal for hours of listening pleasure. With spatial audio and Adaptive EQ, AirPods Pro (2nd generation) deliver a truly immersive and personalized soundstage. Stay connected, enjoy hands-free Siri access, and embrace the future of wireless audio.",
                             ProductImg = "~/images/products/AirPods/AirPods Pro (2nd generation).png",
@@ -849,8 +849,8 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ProductID = new Guid("02147554-b8be-4b1d-9709-f3bdfa8dfe79"),
-                            FkCategoryID = new Guid("c6406d0a-9199-478e-9753-efbfc08a61f5"),
+                            ProductID = new Guid("1365d1ae-5e04-4939-8eb5-d8685d41c701"),
+                            FkCategoryID = new Guid("f2c93ceb-2f1b-4fb4-83ad-1a47bdab2d61"),
                             ProductBrand = "Apple",
                             ProductDescription = "Experience audio excellence with AirPods Max. These over-ear headphones combine high-fidelity audio with the convenience of Apple's ecosystem. Equipped with Adaptive EQ and spatial audio, AirPods Max deliver a truly immersive and captivating listening experience. The Active Noise Cancellation technology blocks out external distractions, allowing you to focus on the rich and detailed sound. With a comfortable and premium design, the AirPods Max are built to provide hours of luxurious listening pleasure. Enjoy seamless device switching, hands-free Siri access, and up to 20 hours of battery life. AirPods Max redefine what you can expect from a pair of headphones.",
                             ProductImg = "~/images/products/AirPods/AirPods Max.png",
@@ -890,51 +890,51 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            AssignmentID = new Guid("8e2a7075-7fae-4aa7-a2a9-85a9575ceb3b"),
+                            AssignmentID = new Guid("0e9b1693-321e-41ad-9e51-1f58ef0984fe"),
                             Date = new DateTime(2023, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DayOfWeek = "Monday",
-                            FkShiftID = new Guid("1d8dd322-0f51-4bea-ab40-f7c56f97308a"),
-                            FkStaffID = new Guid("a7931c2e-5f52-49bd-9879-5545b93c5b1f")
+                            FkShiftID = new Guid("a337eebf-b893-463f-b4b1-325513411c0b"),
+                            FkStaffID = new Guid("9f204c2a-6f5a-421c-9436-adf69718b571")
                         },
                         new
                         {
-                            AssignmentID = new Guid("2b523f88-a195-45d8-9858-1f17fe0fb8e0"),
+                            AssignmentID = new Guid("5bc4eb37-11cd-4440-a302-fbdedaa9ce62"),
                             Date = new DateTime(2023, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DayOfWeek = "Tuesday",
-                            FkShiftID = new Guid("439ecd08-a898-4748-87ff-441fa256f6d0"),
-                            FkStaffID = new Guid("cdc56d5f-8405-49c2-91ab-0fe7bb5e2ba0")
+                            FkShiftID = new Guid("baa93d80-df18-40d7-b2f2-1379a0b38579"),
+                            FkStaffID = new Guid("32f80048-6a03-40b8-ba34-5486d29c5d52")
                         },
                         new
                         {
-                            AssignmentID = new Guid("b873906a-ffb5-4e39-9307-8ec2678f52c0"),
+                            AssignmentID = new Guid("fa44b04b-07c2-4e03-ba2d-42078c403295"),
                             Date = new DateTime(2023, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DayOfWeek = "Wednesday",
-                            FkShiftID = new Guid("26f57e90-92d5-4e89-a0f3-59b9a062c130"),
-                            FkStaffID = new Guid("85425342-2db3-4842-961e-b1e0030410ac")
+                            FkShiftID = new Guid("263aacec-0eeb-4b94-8166-369db9a94a93"),
+                            FkStaffID = new Guid("bac7d3f5-2967-4f46-b5fc-ac3d81f002a3")
                         },
                         new
                         {
-                            AssignmentID = new Guid("47add7d7-3acf-428b-a152-00c780772dbf"),
+                            AssignmentID = new Guid("0326c57a-212a-437e-af98-3814d75fa44c"),
                             Date = new DateTime(2023, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DayOfWeek = "Thursday",
-                            FkShiftID = new Guid("eefb372d-7fab-4e12-a045-795589d8a3f2"),
-                            FkStaffID = new Guid("45dd31d8-5738-488f-ab2d-7cfb1fc98e12")
+                            FkShiftID = new Guid("b6ee8fa2-793d-4908-aaf1-b12d02b22da3"),
+                            FkStaffID = new Guid("11fa36f8-9ce7-4902-88e7-1dcb0e2a121f")
                         },
                         new
                         {
-                            AssignmentID = new Guid("99c7ea2f-73ce-4ce7-9951-9b3b21fde5be"),
+                            AssignmentID = new Guid("250d428c-80b0-4a4c-859a-9d8ea7c66e6f"),
                             Date = new DateTime(2023, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DayOfWeek = "Friday",
-                            FkShiftID = new Guid("dde4e4dd-ee82-4f6e-839c-1ae187eda794"),
-                            FkStaffID = new Guid("b1ff55b3-6864-4a68-ae07-f0d2d92588f2")
+                            FkShiftID = new Guid("fb5d2e50-56bd-4c92-90b2-25119b0597bb"),
+                            FkStaffID = new Guid("b181fa5c-397f-4a83-8341-f995310fe1c9")
                         },
                         new
                         {
-                            AssignmentID = new Guid("b80e1ee9-00a3-4bea-a3cf-02d6103e4578"),
+                            AssignmentID = new Guid("45c30b50-dc27-413e-a2cd-fc9e171559d7"),
                             Date = new DateTime(2023, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DayOfWeek = "Saturday",
-                            FkShiftID = new Guid("dde4e4dd-ee82-4f6e-839c-1ae187eda794"),
-                            FkStaffID = new Guid("822f703e-05ac-4811-8817-e25bf0b708bd")
+                            FkShiftID = new Guid("fb5d2e50-56bd-4c92-90b2-25119b0597bb"),
+                            FkStaffID = new Guid("5c215590-cb65-46b3-876a-8a48d0f7b4c0")
                         });
                 });
 
@@ -979,11 +979,11 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            StaffID = new Guid("9d3a2374-39d9-49ca-874d-8eaa3cb5978f"),
+                            StaffID = new Guid("e1c06761-88ee-42de-8945-0010735d196c"),
                             Address = "Address 1",
                             Dob = new DateTime(1990, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manager1@gmail.com",
-                            HourlyRate = 53m,
+                            HourlyRate = 50m,
                             Password = "Password1#",
                             PhoneNumber = "1234567890",
                             StaffRole = "Manager",
@@ -992,11 +992,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("9252ed85-31c9-4338-8795-94db97cc1dc6"),
+                            StaffID = new Guid("1403c335-4d86-493f-8522-a58750197182"),
                             Address = "Address 2",
                             Dob = new DateTime(1990, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manager2@gmail.com",
-                            HourlyRate = 63m,
+                            HourlyRate = 70m,
                             Password = "Password2#",
                             PhoneNumber = "9876543210",
                             StaffRole = "Manager",
@@ -1005,11 +1005,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("a25afe31-a7ea-4a5f-94c9-d8a26d46281e"),
+                            StaffID = new Guid("12fe0f74-dbf2-4e2a-899f-4dd7efb8fe46"),
                             Address = "Address 3",
                             Dob = new DateTime(1990, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manager3@gmail.com",
-                            HourlyRate = 59m,
+                            HourlyRate = 66m,
                             Password = "Password3#",
                             PhoneNumber = "1111111111",
                             StaffRole = "Manager",
@@ -1018,11 +1018,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("a7931c2e-5f52-49bd-9879-5545b93c5b1f"),
+                            StaffID = new Guid("9f204c2a-6f5a-421c-9436-adf69718b571"),
                             Address = "Address 4",
                             Dob = new DateTime(1990, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "sales1@gmail.com",
-                            HourlyRate = 36m,
+                            HourlyRate = 41m,
                             Password = "Password4#",
                             PhoneNumber = "2222222222",
                             StaffRole = "Sales",
@@ -1031,11 +1031,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("cdc56d5f-8405-49c2-91ab-0fe7bb5e2ba0"),
+                            StaffID = new Guid("32f80048-6a03-40b8-ba34-5486d29c5d52"),
                             Address = "Address 5",
                             Dob = new DateTime(1990, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "sales2@gmail.com",
-                            HourlyRate = 38m,
+                            HourlyRate = 43m,
                             Password = "Password5#",
                             PhoneNumber = "3333333333",
                             StaffRole = "Sales",
@@ -1044,11 +1044,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("85425342-2db3-4842-961e-b1e0030410ac"),
+                            StaffID = new Guid("bac7d3f5-2967-4f46-b5fc-ac3d81f002a3"),
                             Address = "Address 6",
                             Dob = new DateTime(1990, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "sales3@gmail.com",
-                            HourlyRate = 43m,
+                            HourlyRate = 34m,
                             Password = "Password6#",
                             PhoneNumber = "4444444444",
                             StaffRole = "Sales",
@@ -1057,11 +1057,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("45dd31d8-5738-488f-ab2d-7cfb1fc98e12"),
+                            StaffID = new Guid("11fa36f8-9ce7-4902-88e7-1dcb0e2a121f"),
                             Address = "Address 7",
                             Dob = new DateTime(1990, 7, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "guard1@gmail.com",
-                            HourlyRate = 17m,
+                            HourlyRate = 24m,
                             Password = "Password7#",
                             PhoneNumber = "5555555555",
                             StaffRole = "Guard",
@@ -1070,11 +1070,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("b1ff55b3-6864-4a68-ae07-f0d2d92588f2"),
+                            StaffID = new Guid("b181fa5c-397f-4a83-8341-f995310fe1c9"),
                             Address = "Address 8",
                             Dob = new DateTime(1990, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "guard2@gmail.com",
-                            HourlyRate = 27m,
+                            HourlyRate = 17m,
                             Password = "Password8#",
                             PhoneNumber = "6666666666",
                             StaffRole = "Guard",
@@ -1083,11 +1083,11 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            StaffID = new Guid("822f703e-05ac-4811-8817-e25bf0b708bd"),
+                            StaffID = new Guid("5c215590-cb65-46b3-876a-8a48d0f7b4c0"),
                             Address = "Address 9",
                             Dob = new DateTime(1990, 9, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "guard3@gmail.com",
-                            HourlyRate = 21m,
+                            HourlyRate = 17m,
                             Password = "Password9#",
                             PhoneNumber = "7777777777",
                             StaffRole = "Guard",
@@ -1116,19 +1116,19 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            VoucherID = new Guid("c0275e96-dd48-43e7-8ea1-f83837d5f993"),
+                            VoucherID = new Guid("0194973b-d232-4184-8702-bd51daf13d3b"),
                             Code = "DISCOUNT10",
                             DiscountPercentage = 0.1m
                         },
                         new
                         {
-                            VoucherID = new Guid("44eaec69-1152-4982-88db-2fcf93b420ae"),
+                            VoucherID = new Guid("5029b81f-dc0b-415a-994e-390cb36c206b"),
                             Code = "DISCOUNT30",
                             DiscountPercentage = 0.3m
                         },
                         new
                         {
-                            VoucherID = new Guid("bc8aa7a1-25df-41c8-8005-7bfb55996d59"),
+                            VoucherID = new Guid("4b4c4b83-2c3e-4125-bda8-225cc4ada16b"),
                             Code = "DISCOUNT50",
                             DiscountPercentage = 0.5m
                         });
@@ -1169,7 +1169,7 @@ namespace SWP391_MiniStore.Migrations
                     b.HasData(
                         new
                         {
-                            ShiftID = new Guid("1d8dd322-0f51-4bea-ab40-f7c56f97308a"),
+                            ShiftID = new Guid("a337eebf-b893-463f-b4b1-325513411c0b"),
                             EndTime = new TimeSpan(0, 12, 0, 0, 0),
                             Holiday = false,
                             SalaryCoef = 1m,
@@ -1179,7 +1179,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ShiftID = new Guid("439ecd08-a898-4748-87ff-441fa256f6d0"),
+                            ShiftID = new Guid("baa93d80-df18-40d7-b2f2-1379a0b38579"),
                             EndTime = new TimeSpan(0, 18, 0, 0, 0),
                             Holiday = false,
                             SalaryCoef = 1m,
@@ -1189,7 +1189,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ShiftID = new Guid("26f57e90-92d5-4e89-a0f3-59b9a062c130"),
+                            ShiftID = new Guid("263aacec-0eeb-4b94-8166-369db9a94a93"),
                             EndTime = new TimeSpan(0, 6, 0, 0, 0),
                             Holiday = false,
                             SalaryCoef = 1.5m,
@@ -1199,7 +1199,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ShiftID = new Guid("8c4e7eec-68f8-4a89-932a-5e89b577170a"),
+                            ShiftID = new Guid("47671338-9b21-49ae-a8d2-e75554d8a550"),
                             DayOfWeek = "Sunday",
                             EndTime = new TimeSpan(0, 6, 0, 0, 0),
                             Holiday = false,
@@ -1210,7 +1210,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ShiftID = new Guid("6bf04167-bc09-41ca-92b0-bcd7073d6b02"),
+                            ShiftID = new Guid("b372382e-83b0-45eb-a661-5c1bd2272fc8"),
                             EndTime = new TimeSpan(0, 6, 0, 0, 0),
                             Holiday = true,
                             SalaryCoef = 3m,
@@ -1220,7 +1220,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ShiftID = new Guid("eefb372d-7fab-4e12-a045-795589d8a3f2"),
+                            ShiftID = new Guid("b6ee8fa2-793d-4908-aaf1-b12d02b22da3"),
                             EndTime = new TimeSpan(0, 18, 0, 0, 0),
                             Holiday = false,
                             SalaryCoef = 1m,
@@ -1230,7 +1230,7 @@ namespace SWP391_MiniStore.Migrations
                         },
                         new
                         {
-                            ShiftID = new Guid("dde4e4dd-ee82-4f6e-839c-1ae187eda794"),
+                            ShiftID = new Guid("fb5d2e50-56bd-4c92-90b2-25119b0597bb"),
                             EndTime = new TimeSpan(0, 6, 0, 0, 0),
                             Holiday = false,
                             SalaryCoef = 1.5m,

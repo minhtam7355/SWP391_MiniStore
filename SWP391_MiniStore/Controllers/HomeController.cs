@@ -11,7 +11,6 @@ using SWP391_MiniStore.Data;
 
 namespace SWP391_MiniStore.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
